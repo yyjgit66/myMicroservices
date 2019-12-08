@@ -9,5 +9,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class ClentApplication {
     public static void main(String[] args) {
 		SpringApplication.run(ClentApplication.class, args);
+		
 	}
 }
