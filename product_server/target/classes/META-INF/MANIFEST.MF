@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: product_server
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: com.yyj
+Build-Jdk: 1.8.0_112
+Implementation-URL: http://projects.spring.io/spring-boot/product/prod
+ uct_server/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
