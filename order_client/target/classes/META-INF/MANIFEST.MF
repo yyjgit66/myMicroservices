@@ -4,8 +4,7 @@ Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: Administrator
 Implementation-Vendor-Id: com.yyj
 Build-Jdk: 1.8.0_112
-Implementation-URL: http://projects.spring.io/spring-boot/order/order_
- client/
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/order/order_client
 Created-By: Maven Integration for Eclipse
-Implementation-Vendor: Pivotal Software, Inc.
 

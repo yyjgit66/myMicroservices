@@ -1,0 +1,18 @@
+spring:
+  application:
+  #这个name即是应用的名字也是链接配置中心中的名字
+    name: order
+  cloud:
+  #配置中心的配置
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      profile: dev
+#先加载需要将application.yml改为bootstrap.yml
+ #rabbitmq消息队列配置      
+  rabbitmq:
+    host: 192.168.1.5
+    port: 5672
+    username: guest
+    password: guest

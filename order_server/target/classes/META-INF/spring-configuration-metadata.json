@@ -1,0 +1,22 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.yyj.order.config.GirlConfig",
+      "name": "girl",
+      "type": "com.yyj.order.config.GirlConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.yyj.order.config.GirlConfig",
+      "name": "girl.age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.yyj.order.config.GirlConfig",
+      "name": "girl.name",
+      "type": "java.lang.String"
+    }
+  ]
+}
