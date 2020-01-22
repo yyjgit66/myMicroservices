@@ -8,8 +8,10 @@ import javax.validation.Valid;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yyj.order.converter.OrderForm2OrderDto;
@@ -56,5 +58,15 @@ public class OrderController {
 		Map<String,String> map = new HashMap<>();
 		map.put("orderId", resulrt.getOrderId());
 		return ResultVOUtil.success(map);
+	}
+	
+	/**
+	 * 完结订单
+	 * @param orderId
+	 * @return
+	 */
+	@PostMapping("/finish")
+	public ResultVO<OrderDto> finish(@RequestParam("orderId") String orderId){
+		return ResultVOUtil.success(orderService.finish(orderId));
 	}
 }

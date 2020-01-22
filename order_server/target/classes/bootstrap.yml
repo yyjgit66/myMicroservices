@@ -10,9 +10,33 @@ spring:
         service-id: config
       profile: dev
 #先加载需要将application.yml改为bootstrap.yml
- #rabbitmq消息队列配置      
+    #这个是stream分布式的时候只有一个服务器执行任务
+    stream:
+      bindings:
+        #消息的名字
+        myMessage:
+          group: order
+  redis:
+    host: 192.168.1.5
+    port: 6379
+  #rabbitmq消息队列配置             
   rabbitmq:
     host: 192.168.1.5
     port: 5672
     username: guest
-    password: guest
+    password: guest 
+  zipkin:
+    base-url: http://192.168.1.5:9411/
+  sleuth:
+    sampler:
+      percentage: 1
+#这里feign的hystrix服务降级有问题等升级版本在做
+#feign:
+#  hystrix:
+#    enabled: true
+management:
+  context-path: /
+logging:
+  level:
+    org.springframework.cloud.netflix.feign: debug
+    
