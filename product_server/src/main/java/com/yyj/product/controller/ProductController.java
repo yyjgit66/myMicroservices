@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,6 +39,8 @@ public class ProductController {
 	 * 4.构造数据
 	 */
 	@GetMapping("/productInfo")
+	
+	//@CrossOrigin(allowCredentials="true") CrossOrigin这是可以跨域   allowCredentials是允许cookie跨域
 	public ResultVO<ProductVO> list(){
 		//1.查询所有在架的商品
 		List<ProductInfo>  productInfoList = productService.findUpALL();
@@ -74,6 +77,12 @@ public class ProductController {
 	
 	@PostMapping("/listForOrder")
 	public List<ProductInfoOutPut> listForOrder(@RequestBody List<String> productList){
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return  productService.findList(productList);
 	}
 	
